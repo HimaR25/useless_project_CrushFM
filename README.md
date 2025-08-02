@@ -61,20 +61,24 @@ For Software:
 
 ## 📸Screenshots
  Screenshot1
-assets/Screenshot (24).png
+<img width="1920" height="1080" alt="peach" src="https://github.com/user-attachments/assets/a55bcee2-b335-4c5b-8728-4a7e22153e02" />
+
 *flirty compliments*
 
  Screenshot2
-assets/Screenshot (25).png
+<img width="1920" height="1080" alt="pink" src="https://github.com/user-attachments/assets/2a9436be-9057-4a5e-a8f8-86f072981221" />
+
 *boldy compliments*
 
  Screenshot3
-assets/Screenshot (22).png
+<img width="1920" height="1080" alt="violet" src="https://github.com/user-attachments/assets/f4ecf44b-6881-4895-856f-197e7d8ebe27" />
+
 *Hit century of stars*
 
 # Diagrams
  Workflow
-assets/deepseek_mermaid_20250801_74bf3b.png
+<img width="3200" height="3415" alt="flowchart" src="https://github.com/user-attachments/assets/b4228dcf-3784-425c-968a-78b1512f6c24" />
+
 *Workflow diagram*
 
 

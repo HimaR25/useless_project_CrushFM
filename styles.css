@@ -1,0 +1,574 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.7s ease;
+  }
+  
+  /* Background Layers */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -2;
+    transition: opacity 0.7s ease;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+  
+  /* Mood Backgrounds */
+  body.flirty::before {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4);
+    opacity: 1;
+  }
+  
+  body.funny::before {
+    background: linear-gradient(-45deg, #a1c4fd, #c2e9fb);
+    opacity: 1;
+  }
+  
+  body.bold::before {
+    background: linear-gradient(-45deg, #ff758c, #ff7eb3);
+    opacity: 1;
+  }
+  
+  body.poetic::before {
+    background: linear-gradient(-45deg, #a18cd1, #fbc2eb);
+    opacity: 1;
+  }
+  
+  body.shy::before {
+    background: linear-gradient(-45deg, #84fab0, #8fd3f4);
+    opacity: 1;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Mood Selector */
+  .mood-selector {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mood-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+  }
+  
+  .mood-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Rizz Button */
+  #rizz-btn {
+    background: linear-gradient(45deg, #ff4dff, #6e0dd0);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 20px 0;
+  }
+  
+  /* Mood Button Colors */
+  .flirty-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important;
+  }
+  
+  .funny-btn {
+    background: linear-gradient(45deg, #4facfe, #00f2fe) !important;
+  }
+  
+  .bold-btn {
+    background: linear-gradient(45deg, #ff4e50, #f9d423) !important;
+  }
+  
+  .poetic-btn {
+    background: linear-gradient(45deg, #d4b5ff, #a18cd1) !important;
+  }
+  
+  .shy-btn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc) !important;
+  }
+  
+  /* Compliment Card */
+  .compliment-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #compliment-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Action Buttons */
+  #copy-btn, #share-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
+  }
+  
+  #copy-btn:hover, #share-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .ripple-effect {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.3;
+    z-index: -1;
+    transition: 
+      transform 0.7s ease-out,
+      opacity 0.7s ease;
+    pointer-events: none;
+  }
+  
+  /* Confetti Canvas */
+  .confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+  }
+  /* Star Collector Styles */
+#star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    background-size: contain;
+    animation: float-up 3s ease-out forwards;
+  }
+  
+  @keyframes float-up {
+    to {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  #star-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+  }
+  
+  #universe-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1000;
+  }
+  #main-control {
+    /* Base Gradient */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a18cd1 100%);
+    
+    /* Text & Borders */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+    /* Effects */
+    box-shadow: 0 4px 15px rgba(161, 140, 209, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Animated Glow Effect */
+  #main-control::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.1) 50%,
+      rgba(255,255,255,0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+  }
+  
+  /* Hover & Active States */
+  #main-control:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(161, 140, 209, 0.8);
+  }
+  
+  #main-control:active {
+    transform: translateY(1px);
+  }
+  
+  /* Music Playing State */
+  #main-control.music-playing {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #ff758c 100%);
+  }
+  
+  #main-control.music-playing::before {
+    animation-duration: 2s;
+  }
+  /* Bunny Star Collector */
+#star-game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  #bunny-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #bunny {
+    font-size: 3rem;
+    animation: bunny-hop 2s infinite alternate;
+    transform-origin: bottom center;
+  }
+  
+  @keyframes bunny-hop {
+    0% { transform: scale(1) translateY(0); }
+    50% { transform: scale(1.1) translateY(-10px); }
+    100% { transform: scale(1) translateY(0); }
+  }
+  
+  #star-counter {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    margin-top: -15px;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .star {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23FFD700" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    background-size: contain;
+    animation: float-up 3s ease-out forwards;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
+  }
+  
+  @keyframes float-up {
+    to {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  #universe-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 40px;
+    border-radius: 20px;
+    color: #6a11cb;
+    opacity: 0;
+    transition: all 0.5s;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ff758c;
+  }
+  
+  #universe-message.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  /* Bunny Fixed Positioning and Animation */
+#bunny {
+    position: fixed;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: bunny-hop 2s infinite alternate;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    pointer-events: auto;
+  }
+  
+  /* Bunny hover effect */
+  #bunny:hover {
+    transform: translateX(-50%) scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+  /* Bunny hop animation */
+  @keyframes bunny-hop {
+    0% {
+      transform: translateX(-50%) translateY(0px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-15px);
+    }
+  }
+  
+  /* When bunny is celebrating (scale animation) */
+  #bunny.celebrating {
+    animation: bunny-celebrate 1s ease-in-out;
+  }
+  
+  @keyframes bunny-celebrate {
+    0%, 100% {
+      transform: translateX(-50%) scale(1) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-50%) scale(1.3) rotate(-10deg);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.5) rotate(0deg);
+    }
+    75% {
+      transform: translateX(-50%) scale(1.3) rotate(10deg);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #bunny {
+      font-size: 2.5rem;
+      bottom: 20%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #bunny {
+      font-size: 2rem;
+      bottom: 15%;
+    }
+  }
+  
+  /* Optional: Add a subtle glow effect */
+  #bunny.glowing {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.4);
+  }
+
+
+  /* Pink Bear Image - Left Side Positioning */
+#pink-bear {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+    z-index: 90;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Hover effect for the pink bear */
+  #pink-bear:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 182, 193, 0.6);
+    filter: brightness(1.1);
+  }
+  
+  /* Floating animation for the bear */
+  #pink-bear.floating {
+    animation: bear-float 3s ease-in-out infinite;
+  }
+  
+  @keyframes bear-float {
+    0%, 100% {
+      transform: translateY(-50%) translateX(0px);
+    }
+    50% {
+      transform: translateY(-50%) translateX(10px);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    #pink-bear {
+      width: 100px;
+      height: 100px;
+      left: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #pink-bear {
+      width: 80px;
+      height: 80px;
+      left: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Move bear to top-right on mobile to avoid overlap */
+    #pink-bear {
+      top: 80px;
+      left: auto;
+      right: 10px;
+      transform: none;
+      width: 60px;
+      height: 60px;
+    }
+    
+    #pink-bear:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Alternative positioning options */
+  
+  /* Option 2: Top-left corner */
+  #pink-bear.top-left {
+    top: 80px;
+    left: 20px;
+    transform: none;
+  }
+  
+  #pink-bear.top-left:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Option 3: Bottom-left corner */
+  #pink-bear.bottom-left {
+    bottom: 20px;
+    top: auto;
+    transform: none;
+  }
+  
+  #pink-bear.bottom-left:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Cute wiggle animation on click */
+  #pink-bear.wiggle {
+    animation: bear-wiggle 0.5s ease-in-out;
+  }
+  
+  @keyframes bear-wiggle {
+    0%, 100% { transform: translateY(-50%) rotate(0deg); }
+    25% { transform: translateY(-50%) rotate(-5deg); }
+    75% { transform: translateY(-50%) rotate(5deg); }
+  }

@@ -1,96 +1,93 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# CrushFM🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [rubberduckies]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: [Maria Tessa S E ] - [LBS Institute of Technology For Women Poojappura]
+- Member 2: [Hima R] - [LBS Institute of Technology For Women Poojappura]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+[CrushFM is the *completely unnecessary* compliment generator that:
+- Generates absurdly flirty pick-up lines ✨
+- Plays dreamy lo-fi beats 🎧  
+- Creates a star-filled universe when you're feeling extra 🌌  
+*(cuz why not?)*
+]
 
-### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+### The Problem (That Definitely Exists)
+**"What if...**  
+- You had too much confidence?  
+- Your crush needed *more* cringe in their life?  
+- The world lacked shimmering star animations?"
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+CrushFM delivers:  
+- **Mood-based rizz** (Flirty 😏, Funny 🤪, Bold 🔥, Poetic 🌙, Shy 🥺)  
+- **Aesthetic visuals** (Gradients! Glassmorphism! Confetti!)  
+- **A bunny that collects stars** 🐇✨ (??? deffoooo)
 
 ## Technical Details
 ### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+### 💻 Software
+**Languages:**  
+ [HTML5]
+ [CSS3]
+ [JavaScript]
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+ **Libraries:**  
+ [Canvas Confetti] - For celebratory explosions 
+ [Glassmorphism]
 
-### Implementation
-For Software:
-# Installation
-[commands]
 
-# Run
-[commands]
+## 🚀 Installation
+```bash
+# Clone the repository
+git clone https://github.com/RubberDuckies/CrushFM.git
+
+# Open the magic
+cd CrushFM
+open index.html
+
 
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+## 📸Screenshots
+ Screenshot1
+assets/Screenshot (24).png
+*flirty compliments*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+ Screenshot2
+assets/Screenshot (25).png
+*boldy compliments*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+ Screenshot3
+assets/Screenshot (22).png
+*Hit century of stars*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+ Workflow
+assets/deepseek_mermaid_20250801_74bf3b.png
+*Workflow diagram*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+assets/Screen Recording 2025-08-02 054355.mp4
+*Click to watch our chaotic but pretty aesthetic demo..tadahh..presenting CrushFM📻✨*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+Maria	Designed the chaotic aesthetic ✨
+Hima	Made the bunny unnecessarily cute and added the pickup lines🐇
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 

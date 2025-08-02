@@ -93,6 +93,9 @@ assets/Screen Recording 2025-08-02 054355.mp4
 Maria	Designed the chaotic aesthetic ✨
 Hima	Made the bunny unnecessarily cute and added the pickup lines🐇
 
+## Project link
+https://useless-project-crush-fm.vercel.app/
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 

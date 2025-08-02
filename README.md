@@ -50,10 +50,11 @@ CrushFM delivers:
 ```bash
 # Clone the repository
 git clone https://github.com/RubberDuckies/CrushFM.git
-
+```
 # Open the magic
 cd CrushFM
 open index.html
+
 
 
 ### Project Documentation

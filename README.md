@@ -86,6 +86,10 @@ For Software:
 ### Project Demo
 # Video
 assets/Screen Recording 2025-08-02 054355.mp4
+
+https://github.com/user-attachments/assets/88694fdf-bceb-4a5e-ac13-25f0331ea9a1
+
+
 *Click to watch our chaotic but pretty aesthetic demo..tadahh..presenting CrushFM📻✨*
 
 
